@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesDescriptionViewController" customModule="ImdbList" customModuleProvider="target">
+            <connections>
+                <outlet property="lbMovieDescription" destination="Nco-XQ-EAS" id="jIG-oI-3yM"/>
+                <outlet property="lbTitle" destination="RfJ-dc-R8f" id="P4Q-0I-rf2"/>
+                <outlet property="lbYear" destination="7nT-V6-6gT" id="pea-9d-DGh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="QWs-yv-uPF" id="qNT-iQ-NL0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-dc-R8f">
+                    <rect key="frame" x="16" y="377" width="323" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" red="0.99607843139999996" green="1" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieDescription" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nco-XQ-EAS">
+                    <rect key="frame" x="16" y="451" width="382" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.99607843137254903" green="1" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nT-V6-6gT">
+                    <rect key="frame" x="359" y="377" width="39" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.99607843139999996" green="1" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWs-yv-uPF">
+                    <rect key="frame" x="0.0" y="44" width="414" height="233"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QWs-yv-uPF" secondAttribute="height" multiplier="16:9" id="do0-VS-e0a"/>
+                    </constraints>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.16" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Nco-XQ-EAS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7s6-so-ARw"/>
+                <constraint firstItem="Nco-XQ-EAS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9mo-BE-oii"/>
+                <constraint firstItem="QWs-yv-uPF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AO0-dH-Tqm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7nT-V6-6gT" secondAttribute="trailing" constant="16" id="D1B-N4-8Hy"/>
+                <constraint firstItem="7nT-V6-6gT" firstAttribute="top" secondItem="RfJ-dc-R8f" secondAttribute="top" id="LLX-xR-gLk"/>
+                <constraint firstItem="Nco-XQ-EAS" firstAttribute="top" secondItem="RfJ-dc-R8f" secondAttribute="bottom" constant="50" id="Lwh-cG-y0U"/>
+                <constraint firstItem="RfJ-dc-R8f" firstAttribute="top" secondItem="QWs-yv-uPF" secondAttribute="bottom" constant="100" id="Upb-Lm-URj"/>
+                <constraint firstItem="7nT-V6-6gT" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RfJ-dc-R8f" secondAttribute="trailing" constant="20" id="YPY-Ge-zlF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nco-XQ-EAS" secondAttribute="trailing" constant="16" id="eIF-61-CDV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QWs-yv-uPF" secondAttribute="trailing" id="qP0-f0-MSo"/>
+                <constraint firstItem="QWs-yv-uPF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vPz-1Q-cD2"/>
+                <constraint firstItem="RfJ-dc-R8f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yua-IV-RXj"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
+        </view>
+    </objects>
+</document>
